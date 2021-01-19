@@ -46,9 +46,7 @@ enum planck_keycodes {
 #define CTSH_T LCTL(LSFT(KC_T))
 #define CTSH_W LCTL(LSFT(KC_W))
 #define CTSH_P LCTL(LSFT(KC_P))
-
-// Testing
-//#define BACKLIGHT_ENABLE 1
+#define EMDASH UC(0x2014)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -129,7 +127,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | Del  |CTSH_T|CTSH_W|CTSH_P|  F4  |  F5  |  F6  |   _  |   +  |   {  |   }  |  |   |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |TAB R |  F7  |  F8  |  F9  |  F10 |  F11 |  F12 |ISO ~ |ISO | | Home | End  |      |
+ * |TAB R |  F7  |  F8  |  F9  |  F10 |  F11 |  F12 |ISO ~ |  --  | Home | End  |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |TAB L |      |      |      |      |             |      | Next | Vol- | Vol+ | Play |
  * `-----------------------------------------------------------------------------------'
@@ -137,7 +135,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_LOWER] = LAYOUT_planck_grid(
     KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR,    KC_ASTR,    KC_LPRN, KC_RPRN, KC_BSPC,
     KC_DEL,  CTSH_T,  CTSH_W, CTSH_P,   KC_F4,   KC_F5,   KC_F6,   KC_UNDS,    KC_PLUS,    KC_LCBR, KC_RCBR, KC_PIPE,
-    TAB_R  , KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  S(KC_NUHS), S(KC_NUBS), KC_HOME, KC_END,  _______,
+    TAB_R  , KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  UC(0x2014), S(KC_NUBS), KC_HOME, KC_END,  _______,
     TAB_L  , _______, _______, _______, _______, _______, _______, _______,    KC_MNXT,    KC_VOLD, KC_VOLU, KC_MPLY
 ),
 
