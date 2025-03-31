@@ -1,2 +1,2 @@
 SRC += muse.c
-UNICODE_ENABLE = yes
+UNICODE_COMMON = yes

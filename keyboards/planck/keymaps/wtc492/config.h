@@ -37,4 +37,4 @@
 // Most tactile encoders have detents every 4 stages
 #define ENCODER_RESOLUTION 4
 
-#define UNICODE_SELECTED_MODES UC_WINC
+#define UNICODE_SELECTED_MODES UNICODE_MODE_WINCOMPOSE
